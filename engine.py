@@ -431,7 +431,7 @@ def generate(model, data_loader, device, generated_anno_name, percent, coco_path
     input_file = os.path.join(root_dir, 'instances_val2017.json')
     output_file = os.path.join(root_dir, '{}.json'.format(generated_anno_name))
 
-    f = open(os.path.join(root_dir, input_file))  # coco dataset json file
+    f = open(input_file)  # coco dataset json file
     lines = f.readlines()
     f.close()
 
