@@ -428,7 +428,7 @@ def generate(model, data_loader, device, generated_anno_name, percent, coco_path
 
     # root_dir = "/data/Datasets/COCO/annotations/"
     root_dir = os.path.join(coco_path, 'annotations')
-    input_file = os.path.join(root_dir, 'instances_train2017.json')
+    input_file = os.path.join(root_dir, 'instances_val2017.json')
     output_file = os.path.join(root_dir, '{}.json'.format(generated_anno_name))
 
     f = open(os.path.join(root_dir, input_file))  # coco dataset json file
