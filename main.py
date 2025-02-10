@@ -174,8 +174,10 @@ def main(args):
         else:
             lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, milestones)
 
-    dataset_train = build_dataset(image_set='train', args=args)
+    # Removing training set for debugging purposes.
+    #dataset_train = build_dataset(image_set='train', args=args)
     dataset_val = build_dataset(image_set='val', args=args)
+    dataset_train = dataset_val
 
     if args.distributed:
         sampler_train = DistributedSampler(dataset_train)
